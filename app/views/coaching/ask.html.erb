@@ -1,0 +1,13 @@
+<h3>Ask page</h3>
+<%= link_to "answer", answer_path %>
+<%= link_to "coaching", coaching_path %>
+
+
+<form action="/answer" method ="get">
+  <label for="question">Speak to your coach</label>
+  <input type="text" id="question" name="query" placeholder="what are you thinking???">
+  <input type="submit" value="Go on!">
+</form>
+
+<p>The time right now is <%= @v %></p>
+
