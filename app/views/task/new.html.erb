@@ -1,0 +1,26 @@
+<h1>Task#new</h1>
+
+
+<p>Ask again <%= link_to "Ask", ask_path %></p>
+<p>Go to old <%= link_to "old", old_path %></p>
+
+
+<!-- Add a new task
+
+<form action="/old" method ="get">
+  <label for="question">Task title</label>
+  <input type="text" id="question" name="job" placeholder="Name">
+  <label for="question">Hourly pay</label>
+  <input type="text" id="question" name="pay" placeholder="Pay please">
+  <label for="question">Task location</label>
+  <input type="text" id="question" name="location" placeholder="Let's travel">
+  <input type="submit" value="Go on!">
+</form> -->
+
+Congratulations you have been hired to <%= @task[:job]%>, you will be paid <%= @task[:pay] %>, and live in <%= @task[:location] %>.
+
+<ul>
+  <% @task.each do |job| %>
+    <li><%= job %></li>
+  <% end %>
+</ul>
